@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Wellwellwell — создание сайтов для бизнеса и личных проектов</title>
+<meta name="description" content="Wellwellwell: создание сайтов-визиток, лендингов и сайтов с записью. Адаптация под телефон, понятная цена, правки включены.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arepev2024-sketch.github.io/">
+<meta property="og:title" content="Wellwellwell — создание сайтов">
+<meta property="og:description" content="Сайты-визитки, лендинги и сайты с записью за 3–5 дней.">
+<!-- СЮДА вставляются теги подтверждения сайта из Яндекс Вебмастера и Google Search Console -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#04020B; --surface:rgba(18,12,40,.62); --ink:#F1EEFF; --muted:#A9A3C7; --line:rgba(150,130,255,.22);
+  --a:#7C5CFF; --b:#35E0FF; --star:#FFD166; --grad:linear-gradient(120deg,#7C5CFF,#35E0FF);
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html{color-scheme:dark;scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:-1;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--star);outline-offset:3px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.top span{font:700 15px Unbounded,system-ui,sans-serif;letter-spacing:.04em}
+.top a{text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line);background:var(--surface);backdrop-filter:blur(8px);padding:8px 16px;border-radius:999px}
+.hero{display:grid;gap:20px;padding:36px 0 24px;align-items:center}
+@media(min-width:820px){.hero{grid-template-columns:1.2fr .8fr;padding:80px 0 40px}}
+.pill{display:inline-block;background:var(--star);color:#1a1230;font-weight:700;font-size:14px;padding:7px 14px;border-radius:999px;margin-bottom:20px;box-shadow:0 0 24px rgba(255,209,102,.45)}
+h1{font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:clamp(32px,9vw,60px);line-height:1.05;letter-spacing:-.02em;margin:0 0 16px}
+h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:0 0 26px;font-size:17px;color:var(--muted);max-width:44ch}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:14px}
+.btn.w{background:var(--grad);color:#08051a;box-shadow:0 0 28px rgba(124,92,255,.5)}
+.btn.g{border:1px solid var(--line);background:var(--surface);backdrop-filter:blur(8px)}
+.scene{height:300px;display:grid;place-items:center;perspective:900px;justify-self:center;width:100%;max-width:340px}
+.planet{position:relative;width:170px;height:170px;transform-style:preserve-3d;animation:float 7s ease-in-out infinite}
+.planet i{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 32% 28%,#B7A5FF 0,#7C5CFF 32%,#2A1A78 62%,#0A0626 100%);box-shadow:0 0 60px rgba(124,92,255,.55),inset -18px -14px 36px rgba(0,0,0,.6)}
+.planet b{position:absolute;left:-55px;right:-55px;top:50%;height:0;padding-bottom:calc(100% + 110px);margin-top:calc(-50% - 55px);border-radius:50%;border:5px solid rgba(53,224,255,.65);border-left-color:rgba(53,224,255,.15);box-shadow:0 0 22px rgba(53,224,255,.4);transform:rotateX(74deg) rotateZ(-14deg);animation:spin 14s linear infinite}
+.moon{position:absolute;width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#FFD166 55%,#a06a00);right:8%;top:14%;box-shadow:0 0 18px rgba(255,209,102,.6);animation:float 5s ease-in-out infinite reverse}
+@keyframes float{50%{transform:translateY(-14px) rotateY(12deg)}}
+@keyframes spin{to{transform:rotateX(74deg) rotateZ(346deg)}}
+section.blk{padding:56px 0 8px}
+h2{font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:clamp(22px,5.5vw,32px);line-height:1.15;margin:0 0 22px}
+.list{display:grid;gap:16px;perspective:1000px}
+@media(min-width:820px){.list{grid-template-columns:1.6fr 1fr;align-items:start}.list .card:first-child{grid-row:span 2}}
+.card{background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(10px);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:14px;transition:transform .15s ease-out,box-shadow .3s;will-change:transform}
+.card:hover{box-shadow:0 0 40px rgba(124,92,255,.28)}
+.head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.card h3{font-family:Unbounded,system-ui,sans-serif;font-weight:500;font-size:20px;margin:0}
+.card p{margin:0;color:var(--muted)}
+.chip{background:var(--star);color:#1a1230;font:700 13px Unbounded,system-ui,sans-serif;padding:5px 12px;border-radius:999px;white-space:nowrap}
+.chip.soon{background:transparent;border:1.5px dashed var(--line);color:var(--muted);font-family:Manrope,system-ui,sans-serif}
+.opts{display:grid;gap:8px}
+.opt{display:grid;grid-template-columns:1fr auto;gap:2px 10px;text-align:left;width:100%;border:1.5px solid var(--line);background:rgba(255,255,255,.03);color:var(--ink);border-radius:16px;padding:14px 16px;font:700 16px Manrope,system-ui,sans-serif;cursor:pointer}
+.opt .pr{text-align:right;font:700 16px Unbounded,system-ui,sans-serif}
+.opt .pr s{display:block;font:400 12px Manrope,system-ui,sans-serif;color:var(--muted)}
+.opt small{grid-column:1;font:400 14px Manrope,system-ui,sans-serif;color:var(--muted)}
+.opt[aria-pressed="true"]{border-color:var(--b);background:rgba(53,224,255,.1);box-shadow:0 0 22px rgba(53,224,255,.25)}
+.buy{display:block;text-align:center;text-decoration:none;background:var(--grad);color:#08051a;font-weight:700;padding:15px 16px;border-radius:14px;box-shadow:0 0 24px rgba(124,92,255,.4)}
+.card .buy+.buy{margin-top:-6px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media(min-width:820px){.incl{grid-template-columns:1fr 1fr}}
+.incl li{display:flex;gap:10px;background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(8px);border-radius:14px;padding:14px 16px}
+.incl li::before{content:"✦";color:var(--star)}
+.steps{list-style:none;margin:0;padding:0 0 0 22px;position:relative;display:grid;gap:18px;counter-reset:s}
+.steps::before{content:"";position:absolute;left:21px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--a),var(--b));opacity:.6}
+@media(min-width:820px){.steps{grid-template-columns:repeat(4,1fr);padding:34px 0 0;gap:14px}.steps::before{left:20px;right:20px;top:17px;bottom:auto;width:auto;height:2px}}
+.steps li{counter-increment:s;position:relative;padding-left:36px}
+@media(min-width:820px){.steps li{padding:30px 0 0}}
+.steps li::before{content:counter(s);position:absolute;left:-15px;top:0;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#0b0620;border:2px solid var(--b);box-shadow:0 0 18px rgba(53,224,255,.55);font:700 14px Unbounded,system-ui,sans-serif}
+@media(min-width:820px){.steps li::before{left:0;top:-34px}}
+.steps b{display:block;margin-bottom:2px}
+.steps span{color:var(--muted);font-size:15px}
+details{background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(8px);border-radius:14px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+details p{margin:10px 0 0;color:var(--muted)}
+.cta{margin:56px 0 0;border:1px solid var(--line);background:radial-gradient(120% 140% at 50% 0,rgba(124,92,255,.35),rgba(18,12,40,.7));backdrop-filter:blur(10px);border-radius:28px;padding:40px 24px;text-align:center}
+.cta h2{margin-bottom:10px}
+.cta p{margin:0 0 22px;color:var(--muted)}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+footer a{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.planet,.planet b,.moon{animation:none}}
+
+.orb{grid-row:1/3;justify-self:center;border-radius:50%;background:radial-gradient(circle at 32% 28%,#B7A5FF,#7C5CFF 40%,#1a0f55);box-shadow:0 0 18px rgba(124,92,255,.6)}
+.o0{width:24px;height:24px}
+.o1{width:34px;height:34px;background:radial-gradient(circle at 32% 28%,#9CF0FF,#35E0FF 40%,#0b3b5a);box-shadow:0 0 18px rgba(53,224,255,.6)}
+.o2{width:46px;height:46px;background:radial-gradient(circle at 32% 28%,#FFE9A8,#FFD166 40%,#7a4a00);box-shadow:0 0 22px rgba(255,209,102,.6)}
+.opt{grid-template-columns:52px 1fr auto;align-items:center}
+.opt small{grid-column:2/4}
+.cd{margin:-8px 0 22px;color:var(--star);font:700 14px Unbounded,system-ui,sans-serif}
+.demo{text-decoration:none;color:inherit;gap:8px}
+.demo strong{font:500 20px Unbounded,system-ui,sans-serif}
+.demo span{color:var(--b);font-weight:700}
+.sticky{position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:5;text-align:center;text-decoration:none;font-weight:700;color:#08051a;background:var(--grad);padding:15px;border-radius:16px;box-shadow:0 0 34px rgba(124,92,255,.7)}
+@media(min-width:820px){.sticky{display:none}}
+footer{padding-bottom:96px}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="wrap">
+  <div class="top"><span>WELLWELLWELL</span><a href="https://t.me/Wellwellwell15978?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%81%D0%B0%D0%B9%D1%82." target="_blank" rel="noopener">Написать</a></div>
+
+  <header class="hero">
+    <div>
+      <span class="pill">Скидка 30% до 30 ноября</span>
+      <h1>Сайт для вашего дела <em>за 3–5 дней</em></h1>
+      <p>Визитки, лендинги и сайты с записью. Удобно открываются на телефоне, цена понятна заранее, две правки включены.</p>
+      <div class="cd" id="cd"></div>
+      <div class="ctas">
+        <a class="btn w" href="#price">Выбрать сайт</a>
+        <a class="btn g" href="https://t.me/Wellwellwell15978?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%81%D0%B0%D0%B9%D1%82." target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+    </div>
+    <div class="scene" aria-hidden="true"><div class="planet"><i></i><b></b><span class="moon"></span></div></div>
+  </header>
+
+  <section class="blk" id="price">
+    <h2>Выберите сайт</h2>
+    <main class="list" id="list"><section class="card"><div class="head"><h3>Создание сайта</h3><span class="chip">от 700 ₽</span></div><a class="buy" href="https://t.me/Wellwellwell15978?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%E2%80%94%20%D0%A1%D0%B0%D0%B9%D1%82-%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D0%B0%20%28700%20%E2%82%BD%20%D0%BF%D0%BE%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%29.">Заказать: Сайт-визитка, 700 ₽</a><a class="buy" href="https://t.me/Wellwellwell15978?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%E2%80%94%20%D0%9B%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3%20%281700%20%E2%82%BD%20%D0%BF%D0%BE%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%29.">Заказать: Лендинг, 1700 ₽</a><a class="buy" href="https://t.me/Wellwellwell15978?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%E2%80%94%20%D0%A1%D0%B0%D0%B9%D1%82%20%D1%81%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%D1%8E%20%283500%20%E2%82%BD%20%D0%BF%D0%BE%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%29.">Заказать: Сайт с записью, 3500 ₽</a></section><section class="card"><div class="head"><h3>Telegram-бот</h3><span class="chip soon">Скоро</span></div><p>Боты для заявок и ответов клиентам.</p></section><section class="card"><div class="head"><h3>Обучение вайбкодингу</h3><span class="chip soon">Скоро</span></div><p>Научу создавать сайты с помощью нейросетей, в том числе с телефона.</p></section></main>
+  </section>
+
+  <section class="blk">
+    <h2>Пример работы</h2>
+    <a class="card demo" href="demo-coffee.html"><strong>Сайт для кофейни</strong><p>Меню, часы работы и бронирование столика. Откройте и посмотрите, как это выглядит у клиента.</p><span>Смотреть пример →</span></a>
+  </section>
+
+  <section class="blk">
+    <h2>Что входит в цену</h2>
+    <ul class="incl">
+      <li>Красивый вид на телефоне и компьютере</li>
+      <li>Кнопка заявки, которая открывает Telegram</li>
+      <li>Две правки после показа первой версии</li>
+      <li>Публикация сайта в интернете</li>
+      <li>Цена называется заранее, без скрытых доплат</li>
+      <li>Быстрые ответы в Telegram</li>
+    </ul>
+  </section>
+
+  <section class="blk">
+    <h2>Как это работает</h2>
+    <ol class="steps">
+      <li><b>Пишете в Telegram</b><span>Коротко: чем занимаетесь и что нужно на сайте.</span></li>
+      <li><b>Согласуем план</b><span>Я называю итоговую цену и срок.</span></li>
+      <li><b>Показываю версию</b><span>Вы смотрите и просите две правки.</span></li>
+      <li><b>Публикую сайт</b><span>Присылаю ссылку, и сайт готов.</span></li>
+    </ol>
+  </section>
+
+  <section class="blk">
+    <h2>Частые вопросы</h2>
+    <details><summary>Сколько времени занимает сайт?</summary><p>Обычно 3–5 дней, зависит от того, как быстро вы пришлёте тексты и фото.</p></details>
+    <details><summary>Что нужно от меня?</summary><p>Название, коротко о себе или бизнесе, контакты и фото, если они есть. Остальное подскажу.</p></details>
+    <details><summary>Домен и хостинг входят в цену?</summary><p>Публикация на бесплатном хостинге входит. Свой домен (например, название.ru) оплачивается отдельно, помогу его подключить.</p></details>
+    <details><summary>Что если нужно больше правок?</summary><p>Две правки включены. Дополнительные обсудим в чате, это недорого.</p></details>
+    <details><summary>Как оплатить?</summary><p>Способ оплаты обсудим в Telegram перед началом работы.</p></details>
+  </section>
+
+  <div class="cta">
+    <h2>Давайте сделаем ваш сайт</h2>
+    <p>Напишите, чем занимаетесь, и я отвечу с ценой и сроком.</p>
+    <a class="btn w" href="https://t.me/Wellwellwell15978?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%81%D0%B0%D0%B9%D1%82." target="_blank" rel="noopener">Написать в Telegram</a>
+  </div>
+
+  <footer>Wellwellwell — создание сайтов. Telegram: <a href="https://t.me/Wellwellwell15978">@Wellwellwell15978</a></footer>
+</div>
+
+<a class="sticky" id="stk" href="https://t.me/Wellwellwell15978?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%81%D0%B0%D0%B9%D1%82." target="_blank" rel="noopener">Заказать сайт · −30%</a>
+<script>
+/* ===== ТВОИ ДАННЫЕ: меняй только этот блок =====
+   price: цена по акции, old: обычная цена. Telegram-ник менять в TG_USER. */
+var TG_USER = "Wellwellwell15978";
+var OPTS = [
+  {name:"Сайт-визитка", price:"700 ₽", old:"1000 ₽", note:"Одна страница: кто вы, чем занимаетесь, контакты."},
+  {name:"Лендинг", price:"1700 ₽", old:"2500 ₽", note:"Одна страница, которая продаёт товар или услугу."},
+  {name:"Сайт с записью", price:"3500 ₽", old:"5000 ₽", note:"Несколько блоков и форма заявки или записи."}
+];
+
+/* ===== конец данных ===== */
+
+document.documentElement.classList.add("js");
+var END = new Date(2026,10,30,23,59,59), LIVE = Date.now() < END.getTime();
+if(!LIVE){OPTS.forEach(function(o){o.price=o.old;o.old=""});var pl=document.querySelector(".pill");if(pl)pl.style.display="none";document.getElementById("stk").textContent="Заказать сайт"}
+var cd = document.getElementById("cd");
+function tick(){
+  var d = END - Date.now();
+  if(d<=0||!LIVE){cd.textContent="";return}
+  var dd=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4),s=Math.floor(d%6e4/1e3);
+  cd.textContent="До конца акции: "+dd+" дн "+h+" ч "+m+" мин "+s+" с";
+}
+tick(); setInterval(tick,1000);
+var sel = 0;
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function link(){
+  var o = OPTS[sel];
+  var t = "Здравствуйте! Хочу заказать: Создание сайта — " + o.name + " (" + o.price + (LIVE ? " по акции" : "") + ").";
+  return "https://t.me/" + TG_USER + "?text=" + encodeURIComponent(t);
+}
+function render(){
+  var o = OPTS[sel];
+  document.getElementById("list").innerHTML =
+    '<section class="card"><div class="head"><h3>Создание сайта</h3><span class="chip">от '+esc(OPTS[0].price)+'</span></div>'+
+    '<p>Сделаю сайт под вашу задачу: от простой страницы до сайта с заявками.</p>'+
+    '<div class="opts">'+OPTS.map(function(x,j){
+      return '<button class="opt" data-j="'+j+'" aria-pressed="'+(sel===j)+'"><i class="orb o'+j+'"></i><span>'+esc(x.name)+'</span><span class="pr">'+esc(x.price)+(x.old?'<s>'+esc(x.old)+'</s>':'')+'</span><small>'+esc(x.note)+'</small></button>';
+    }).join("")+'</div>'+
+    '<a class="buy" href="'+link()+'" target="_blank" rel="noopener">Заказать за '+esc(o.price)+'</a></section>'+
+    '<section class="card"><div class="head"><h3>Telegram-бот</h3><span class="chip soon">Скоро</span></div><p>Боты для заявок и ответов клиентам.</p></section>'+
+    '<section class="card"><div class="head"><h3>Обучение вайбкодингу</h3><span class="chip soon">Скоро</span></div><p>Научу создавать сайты с помощью нейросетей, в том числе с телефона.</p></section>';
+}
+document.getElementById("list").addEventListener("click",function(e){
+  var b = e.target.closest(".opt"); if(!b) return;
+  sel = +b.dataset.j; render();
+});
+render();
+
+/* 3D-наклон карточек (только где есть мышь) */
+if(window.matchMedia("(hover:hover)").matches){
+  var L = document.getElementById("list");
+  L.addEventListener("pointermove",function(e){
+    var c = e.target.closest(".card"); if(!c) return;
+    var r = c.getBoundingClientRect();
+    var x = (e.clientX-r.left)/r.width-.5, y = (e.clientY-r.top)/r.height-.5;
+    c.style.transform = "rotateY("+(x*7)+"deg) rotateX("+(-y*7)+"deg)";
+  });
+  L.addEventListener("pointerout",function(e){var c=e.target.closest(".card"); if(c) c.style.transform="";});
+}
+
+/* Появление блоков при прокрутке */
+if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll(".blk h2,.incl li,.steps li,details,.cta,.demo").forEach(function(el){el.classList.add("rv");io.observe(el)});
+}
+
+/* Небо: 3D-галактика, туманности, падающие звёзды */
+(function(){
+  var cv=document.getElementById("sky"),cx=cv.getContext("2d"); if(!cx) return;
+  var W,H,D,S=[],B=[],M=[],N=1300,ang=0,tx=0,ty=0,px=0,py=0,sy=0,nxt=1500;
+  var calm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var NB=[[.15,.2,.55,"124,92,255"],[.9,.55,.6,"53,224,255"],[.3,.95,.6,"200,60,200"]];
+  function size(){D=Math.min(devicePixelRatio||1,2);W=cv.width=innerWidth*D;H=cv.height=innerHeight*D}
+  size(); addEventListener("resize",size);
+  for(var i=0;i<N;i++){
+    var arm=i%3,r=Math.pow(Math.random(),.6)*420,a=arm*2.094+r*.011+(Math.random()-.5)*.55;
+    S.push({x:Math.cos(a)*r,y:(Math.random()-.5)*(70-r*.1),z:Math.sin(a)*r,r:r});
+  }
+  for(var j=0;j<240;j++) B.push({x:Math.random(),y:Math.random(),s:Math.random()*1.4+.3,p:Math.random()*6});
+  addEventListener("pointermove",function(e){tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5});
+  addEventListener("scroll",function(){sy=scrollY/Math.max(1,document.body.scrollHeight-innerHeight)});
+  function col(r){var q=r/420;return q<.15?"255,209,102":q<.5?"190,160,255":"90,200,255"}
+  function frame(t){
+    cx.fillStyle="#04020B";cx.fillRect(0,0,W,H);
+    for(var q=0;q<NB.length;q++){
+      var nb=NB[q],nx=(nb[0]+Math.sin(t*.00007+q*2)*.05)*W,ny=(nb[1]-sy*.25)*H,nr=nb[2]*Math.max(W,H)*.55;
+      var g=cx.createRadialGradient(nx,ny,0,nx,ny,nr);
+      g.addColorStop(0,"rgba("+nb[3]+",.20)");g.addColorStop(1,"rgba("+nb[3]+",0)");
+      cx.fillStyle=g;cx.fillRect(0,0,W,H);
+    }
+    for(var k=0;k<B.length;k++){var b=B[k],o=.35+.65*Math.abs(Math.sin(t*.001+b.p));cx.fillStyle="rgba(255,255,255,"+(calm?.6:o)+")";cx.fillRect(b.x*W,((b.y-sy*.08+1)%1)*H,b.s*D,b.s*D)}
+    px+=(tx-px)*.05;py+=(ty-py)*.05;
+    if(!calm)ang+=.0016;
+    var tilt=1.05+py*.5+sy*.3,ca=Math.cos(ang+px*.8),sa=Math.sin(ang+px*.8),ct=Math.cos(tilt),st=Math.sin(tilt);
+    var sc=Math.min(W,H*1.2)/820,cxp=W*.5,cyp=H*(.42-sy*.2);
+    for(var n=0;n<N;n++){
+      var s=S[n],x=s.x*ca-s.z*sa,z=s.x*sa+s.z*ca,y=s.y*ct-z*st,zz=s.y*st+z*ct+700;
+      var f=700/zz,X=cxp+x*f*sc*1.5,Y=cyp+y*f*sc*1.5,al=Math.min(1,.25+f*.55-s.r/900);
+      cx.fillStyle="rgba("+col(s.r)+","+al.toFixed(2)+")";
+      var sz=(1.1+f*1.3)*D*(s.r<60?1.4:1);cx.fillRect(X,Y,sz,sz);
+    }
+    if(!calm){
+      if(t>nxt){M.push({x:W*(.4+Math.random()*.6),y:Math.random()*H*.45,vx:-(7+Math.random()*5)*D,vy:(3.5+Math.random()*3)*D,l:1});nxt=t+2500+Math.random()*4500}
+      for(var m=M.length-1;m>=0;m--){
+        var p=M[m],lg=cx.createLinearGradient(p.x,p.y,p.x-p.vx*9,p.y-p.vy*9);
+        lg.addColorStop(0,"rgba(255,255,255,"+p.l+")");lg.addColorStop(1,"rgba(124,92,255,0)");
+        cx.strokeStyle=lg;cx.lineWidth=1.6*D;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(p.x-p.vx*9,p.y-p.vy*9);cx.stroke();
+        p.x+=p.vx;p.y+=p.vy;p.l-=.018;if(p.l<=0)M.splice(m,1);
+      }
+      requestAnimationFrame(frame);
+    }
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
